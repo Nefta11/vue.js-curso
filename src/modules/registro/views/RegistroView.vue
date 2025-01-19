@@ -13,7 +13,7 @@
         <ErrorMessage name="email" />
       </div>
       <div class="form">
-        <submit>Registrarse</submit>
+        <button type="submit">Registrarse</button>
       </div>
     </Form>
   </div>
