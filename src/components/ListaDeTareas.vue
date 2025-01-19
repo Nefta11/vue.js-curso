@@ -3,7 +3,10 @@
     <h2>Lista de tareas</h2>
     <input type="text" v-model="nuevaTarea" @keyup.enter="agregarTarea" />
     <ul>
-      <li v-for="tarea in tareas" :key="tarea">{{ tarea }}</li>
+      <li v-for="{ tarea, index } in tareas" :key="index">
+        {{ tarea }}
+        <button @click="borrarTarea(index)">Borrar Tarea</button>
+      </li>
     </ul>
   </div>
 </template>
@@ -17,8 +20,8 @@ const agregarTarea = () => {
   nuevaTarea.value = ''
 }
 
-const borrarTarea = () => {
-  tareas.value.pop()
+const borrarTarea = (index) => {
+  tareas.value.splice(index, 1)
 }
 </script>
 
