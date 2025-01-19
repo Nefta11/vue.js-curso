@@ -1,5 +1,5 @@
 <template>
-<h3>7°</h3>
+7°
 </template>
 
 <script setup>
