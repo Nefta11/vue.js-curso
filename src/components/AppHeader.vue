@@ -1,10 +1,13 @@
 <template>
   <div class="header">
-    <h3>La temperatura actual es:</h3>
+    <h3>La temperatura actual es: <Weather/>  </h3>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Weather from './AppWeather.vue';
+
+</script>
 
 <style scoped>
 .header {
