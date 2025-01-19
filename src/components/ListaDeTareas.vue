@@ -16,6 +16,10 @@ const agregarTarea = () => {
   tareas.value.push(nuevaTarea.value)
   nuevaTarea.value = ''
 }
+
+const borrarTarea = () => {
+  tareas.value.pop()
+}
 </script>
 
 <style></style>
