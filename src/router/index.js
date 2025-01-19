@@ -11,7 +11,7 @@ const router = createRouter({
     {
       path: '/Contador',
       name: 'Contador',
-      component: () => import('../components/Contador.vue'),
+      component: () => import('../modules/contador/components/Contador.vue'),
     },
     {
       path: '/ListaDeTareas',
