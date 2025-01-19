@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <h2>Bienvenido</h2>
-    <h3>Nombre:{{ registrarStore.nombre }}</h3>
+    <h3>Nombre: {{ registrarStore.nombre }}</h3>
     <h3>Email: {{ registrarStore.email }}</h3>
     <ul>
       <li><router-link to="/Contador">Contador</router-link></li>
