@@ -1,32 +1,35 @@
 <template>
   <div>
     <h2>Formulario de registro</h2>
-    <input type="text" placeholder="Ingrese su nombre" />
-    <input type="mail" placeholder="Ingrese su email" />
-    <submit>Registrarse</submit>
+    <Form :validation-schema="schema" @submit="submit">
+      <div class="form">
+        <label for="nombre">Nombre: </label>
+        <Field type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" />
+        <ErrorMessage name="nombre" />
+      </div>
+      <div class="form">
+        <label for="email">Email: </label>
+        <Field type="mail" name="email" id="email" placeholder="Ingrese su email" />
+        <ErrorMessage name="email" />
+      </div>
+      <div class="form">
+        <submit>Registrarse</submit>
+      </div>
+    </Form>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { Form, Field, ErrorMessage } from 'vee-validate'
+import { schema } from '../schemas/ValidationSchema'
+
+const submit = () => {
+  console.log('Formulario enviado')
+}
+</script>
 
 <style scoped>
-h2 {
-  color: #333;
-}
-input {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-submit {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
-submit:hover {
-  background-color: #555;
+.form {
+  margin-bottom: 10px;
 }
 </style>
