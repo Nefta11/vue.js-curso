@@ -17,7 +17,6 @@ watch(
 </script>
 
 <style scoped>
-
 .header {
   display: flex;
   justify-content: center;
@@ -33,5 +32,4 @@ watch(
 h3 {
   margin: 0;
 }
-
 </style>
